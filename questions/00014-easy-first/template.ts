@@ -1,1 +1,2 @@
-type First<T extends any[]> = any
+type First<T extends readonly any[]> =
+    T extends readonly [] ? never : T[0]
